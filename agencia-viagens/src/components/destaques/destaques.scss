@@ -1,0 +1,95 @@
+.secao-title{
+  // border: 2px solid;
+  h2{
+    font-size: 2.5rem;
+  }
+}
+.card{
+    // border: 2px solid red;
+    width: 305px;
+    height: 597px;
+    box-shadow: -3px 5px 4px #838383;
+
+.custom-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.title-overlay {
+  position: absolute;
+  bottom: 0; /* gruda na faixa laranja */
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card-body{
+  // border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .title-cidade{
+    font-size: .9rem;
+    img{
+      width: 20px;
+    }
+    .card-text{
+      font-size: .9rem;
+
+    }
+  }
+
+  .box-preco{
+    // border: 2px solid;
+    display: flex;
+    margin: 0;
+
+    .col-btn{
+      background-color: #14974F;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+ 
+      img{
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+      .btn{
+        height: 1.9rem;
+        padding: 0px;
+        font-size: .9rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .col-preco{
+      // border: 2px solid;
+      padding: 0;
+      // font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .texto{
+        font-size: .7rem;
+      }
+      .preco{
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
+}
+
