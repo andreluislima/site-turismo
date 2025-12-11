@@ -1,0 +1,47 @@
+.video-card {
+  background-color: #111;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  height: 100%;
+}
+
+.video-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.videos_text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.play_icon_2 {
+  margin: 10px 0;
+}
+
+.play_icon_2 img {
+  width: 40px;
+  height: 40px;
+}
+
+.playnow_bt a {
+  display: inline-block;
+  padding: 6px 18px;
+  background-color: #ff4a57;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.playnow_bt a:hover {
+  opacity: 0.85;
+}
+
+#customSlider {
+  overflow: hidden;
+}
