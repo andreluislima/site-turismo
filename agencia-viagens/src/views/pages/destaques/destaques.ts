@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Card } from "../card/card";
+import { Card } from "../../../components/card/card";
 
 @Component({
   selector: 'app-destaques',
