@@ -15,29 +15,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ms-auto mb-md-0 mx-5">
-      <li class="nav-item">
-        <img src="assets/img/icons/icons8-mala-64.png" alt="" />
-        <a class="nav-link active" aria-current="page" href="#">Pacotes</a>
-      </li>
+      <li class="nav-item" *ngFor="let page of navPages">
 
-      <li class="nav-item">
-        <img src="assets/img/icons/icons8-mala-64.png" alt="" />
-        <a class="nav-link" href="#">Soluções de viagem</a>
-      </li>
-
-      <li class="nav-item">
-        <img src="assets/img/icons/icons8-mala-64.png" alt="" />
-        <a class="nav-link" href="#">Passagens</a>
-      </li>
-
-      <li class="nav-item">
-        <img src="assets/img/icons/icons8-mala-64.png" alt="" />
-        <a class="nav-link" href="#">Passeios e Experiencias</a>
-      </li>
-
-      <li class="nav-item">
-        <img src="assets/img/icons/icons8-mala-64.png" alt="" />
-        <a class="nav-link" href="#">Quem Somos</a>
+        <img [src]="page.img" alt="">
+        <a class="nav-link active" aria-current="page" href="#"
+        >{{page.item}}</a>
+        
       </li>
     </ul>
   </div>
