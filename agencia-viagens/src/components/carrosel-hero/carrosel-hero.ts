@@ -1,18 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { CarouselModule } from 'primeng/carousel';
+import { Carousel } from "primeng/carousel";
 
 @Component({
-  selector: 'app-teste-carrosel',
+  selector: 'app-carrosel-hero',
   standalone: true,
-  imports: [CarouselModule, ButtonModule, CommonModule],
-  templateUrl: './teste-carrosel.html',
-  styleUrls: ['./teste-carrosel.scss'],
+  imports: [Carousel, CommonModule, ButtonModule],
+  templateUrl: './carrosel-hero.html',
+  styleUrl: './carrosel-hero.scss',
 })
-export class TesteCarrosel implements OnInit {
+export class CarroselHero implements OnInit {
 
-  responsiveOptions: any[] = [];
+ responsiveOptions: any[] = [];
 
   slides = [
     { img: 'assets/img/banner-teste.svg' },
