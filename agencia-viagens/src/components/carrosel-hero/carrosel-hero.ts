@@ -15,9 +15,9 @@ export class CarroselHero implements OnInit {
  responsiveOptions: any[] = [];
 
   slides = [
-    { img: 'assets/img/banner-teste.svg' },
-    { img: 'assets/img/banner-teste.svg' },
-    { img: 'assets/img/banner-teste.svg' }
+    { img: 'assets/img/banner-01.svg' },
+    { img: 'assets/img/banner-02.svg' },
+    { img: 'assets/img/banner-03.svg' }
   ];
 
   ngOnInit(): void {

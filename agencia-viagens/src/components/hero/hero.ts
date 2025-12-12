@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TesteCarrosel } from "../teste-carrosel/teste-carrosel";
 import { CarroselHero } from "../carrosel-hero/carrosel-hero";
 
 @Component({
   selector: 'app-hero',
-  imports: [CommonModule, TesteCarrosel, CarroselHero],
+  imports: [CommonModule, CarroselHero],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
