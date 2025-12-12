@@ -4,7 +4,7 @@
   padding-top: 0;
 
   .logo{
-    width: 6.5rem;
+    width: 6.7rem;
     margin-left: 100px;
     // border: 2px solid;
   }
@@ -20,14 +20,41 @@
       color: #fff;
       font-size: .8rem;
       font-weight: 600;
+      text-transform: capitalize;
     }
     
     img{
       //  border: 2px solid;
        width: 1.4rem;
        color: #fff;
+       
     }
   }
 }
 
+@media(max-width:768px){
+ .navbar .logo {
+    margin-left: 33px;
+    padding: 2px;
+    width: 100px;
+
+  }
  
+  ul{
+    // border: 2px solid;
+    display: flex;
+    align-items: flex-start;
+  }
+  ul li {
+    // border: 2px solid;
+    margin-bottom: 5px;
+    .nav-link{
+      // border: 2px solid red;
+      font-size: 1.1rem !important;
+      margin-bottom: 5px;
+    }
+    img{
+      display: none;
+    }
+  }
+}
