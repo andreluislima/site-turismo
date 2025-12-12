@@ -2,25 +2,19 @@
   <a class="navbar-brand" href="#">
     <img class="logo" src="assets/img/logo2.svg" alt="Logo" />
   </a>
-  <button
-    class="navbar-toggler mx-4"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#navbarCollapse"
-    aria-controls="navbarCollapse"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav ms-auto mb-md-0 mx-5">
-      <li class="nav-item" *ngFor="let page of navPages">
 
-        <img [src]="page.img" alt="">
-        <a class="nav-link active" aria-current="page" href="#"
-        >{{page.item}}</a>
-        
+  <app-toggle 
+    class="mx-4" 
+    [isOpen]="isMenuOpen" 
+    (toggle)="toggleMenu()"
+    >
+  </app-toggle>
+
+  <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarCollapse">
+    <ul class="navbar-nav ms-auto mb-md-0 mx-5">
+      <li class="nav-item" *ngFor="let page of navPages" (click)="closeMenu()">
+        <img [src]="page.img" alt="" />
+        <a class="nav-link active" aria-current="page" href="#">{{ page.item }}</a>
       </li>
     </ul>
   </div>

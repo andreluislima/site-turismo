@@ -1,14 +1,25 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Toggle } from "../toggle/toggle";
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule],
+  imports: [CommonModule, Toggle],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
 export class Navbar {
 
+  isMenuOpen = false;
+
+  toggleMenu(){
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(){
+    this.isMenuOpen = false;
+  }
+  
   navPages = [
     {
       "item": "pacotes",

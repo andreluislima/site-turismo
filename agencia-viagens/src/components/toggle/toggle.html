@@ -1,0 +1,12 @@
+<button
+  class="navbar-toggler"
+  type="button"
+  (click)="onToggle()"
+  [attr.aria-expanded]="isOpen"
+>
+  <span class="toggler" [class.is-open]="isOpen">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </span>
+</button>
