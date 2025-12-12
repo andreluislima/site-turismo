@@ -1,12 +1,92 @@
-.container{
-    // border: 2px solid;
-    max-width: 100%;
-    background-color: #0648A8;
-    color: #fff;
+.site-footer {
+  background-color: #0648A8;
+  color: #fff;
 
-    ul li{
-      a{
-        color: #fff;  
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .footer-row {
+    // espaço entre colunas no desktop
+    // o `gy-4` do Bootstrap já cuida do eixo vertical
+  }
+
+  .footer-logo {
+    .footer-logo-link {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+
+      img {
+        max-width: 150px;
+        height: auto;
+        display: block;
       }
     }
+  }
+
+  .footer-links {
+    h5 {
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .nav-link {
+      padding: 0;
+      font-size: 0.95rem;
+    }
+  }
+
+  .footer-social {
+    .footer-social-list {
+      list-style: none;
+
+      .nav-item {
+        .nav-link {
+          padding: 0;
+        }
+      }
+    }
+
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+  }
+
+  .footer-bottom {
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  /* Responsividade extra (mobile-first) */
+  @media (max-width: 767.98px) {
+    .footer-logo {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links {
+      text-align: center;
+
+      ul {
+        align-items: center;
+      }
+    }
+
+    .footer-social {
+      margin-top: 0.5rem;
+
+      .footer-social-list {
+        justify-content: center;
+      }
+    }
+  }
 }
