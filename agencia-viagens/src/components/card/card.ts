@@ -1,15 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { PACOTES } from '../../app/data/data.pacotes';
-import { PacotesCard } from '../../app/domain/cards.pacotes';
+import { Component, Input } from '@angular/core';
+import { CardItem } from '../../app/domain/carditem';
 
 @Component({
   selector: 'app-card',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './card.html',
   styleUrl: './card.scss',
 })
 export class Card {
-
-  pacotes: PacotesCard[] = PACOTES;
+  @Input({ required: true }) item!: CardItem;
 }
