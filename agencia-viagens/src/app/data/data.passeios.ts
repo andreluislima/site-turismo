@@ -1,14 +1,14 @@
 import { PacotesCard } from "../domain/cards.pacotes";
 
-export const PACOTES: PacotesCard[] = [
+export const PASSEIOS: PacotesCard[] = [
     {
         id:"1",
-        titulo: "Pacotes para maragogi",
-        cidade:"Maragogi",
-        uf:"AL",
-        imgBanner:"assets/img/pacotes_viagens/al_maragogi.svg",
+        titulo: "Visite o Pão de Açucar",
+        cidade:"Rio de Janeiro",
+        uf:"RJ",
+        imgBanner:"assets/img/pacotes_viagens/rj_pao_de_acucar.svg",
         imgIcon:"assets/img/icons/icons8-marcador.png",
         descricao:"Visite as lindas praias do Caribe brasileiro",
         preco:"R$899,00"
     }
-];
+]
