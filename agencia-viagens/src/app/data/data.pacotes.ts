@@ -1,6 +1,6 @@
-import { PacotesCard } from "../domain/cards.pacotes";
+import { CardItem } from "../domain/carditem";
 
-export const PACOTES: PacotesCard[] = [
+export const PACOTES: CardItem[] = [
     {
         id:"1",
         titulo: "Pacotes para maragogi",

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { Card } from "../../../components/card/card";
-import { PACOTES } from '../../../app/data/data.pacotes';
 import { CommonModule } from '@angular/common';
+import { PASSEIOS } from '../../../app/data/data.passeios';
+import { Card } from "../../../components/card/card";
 
 @Component({
   selector: 'app-catalogo',
-  imports: [Card,CommonModule],
+  imports: [CommonModule, Card],
   templateUrl: './catalogo.html',
   styleUrl: './catalogo.scss',
 })
 export class Catalogo {
- pacotes = PACOTES;
+ passeios = PASSEIOS;
 }

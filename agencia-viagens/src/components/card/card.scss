@@ -1,89 +1,171 @@
-.card{
-    // border: 2px solid red;
-    width: 305px;
-    height: 597px;
-    box-shadow: -3px 5px 4px #838383;
 
-.custom-card {
+/* =========================================================
+   CARD – BASE (Mobile First)
+   ========================================================= */
+.card {
+  // border: 2px solid red;
+
+  width: 100%;
+  max-width: 310px;     /* Desktop grande */
+  height: 587px;
+
+  margin: 0 auto;
+  box-shadow: -3px 5px 4px #838383;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 }
 
+/* =========================================================
+   IMAGEM + TÍTULO SOBREPOSTO
+   ========================================================= */
 .img-wrapper {
   position: relative;
 }
 
 .title-overlay {
   position: absolute;
-  bottom: 0; /* gruda na faixa laranja */
+  bottom: 0;           /* gruda na faixa inferior da imagem */
   left: 0;
   width: 100%;
   padding: 10px;
+
   color: #fff;
   font-weight: bold;
   font-size: 18px;
 }
 
-.card-body{
-  // border: 2px solid;
+/* =========================================================
+   CORPO DO CARD
+   ========================================================= */
+.card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
 
-  .title-cidade{
-    font-size: .9rem;
-    img{
-      width: 20px;
-    }
-    .card-text{
-      font-size: .9rem;
+  min-width: 0;        /* evita overflow em flexbox */
+}
 
-    }
+/* =========================================================
+   TÍTULO / LOCALIZAÇÃO / DESCRIÇÃO
+   ========================================================= */
+.title-cidade {
+  font-size: 0.9rem;
+
+  img {
+    width: 20px;
   }
 
-  .box-preco{
-    // border: 2px solid;
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================================
+   ÁREA DE PREÇO E BOTÃO
+   ========================================================= */
+.box-preco {
+  display: flex;
+  margin: 0;
+}
+
+.col-btn {
+  background-color: #14974F;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .btn {
+    height: 1.9rem;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #fff;
     display: flex;
-    margin: 0;
+    align-items: center;
+  }
+}
 
-    .col-btn{
-      background-color: #14974F;
-      border-radius: 40px;
-      display: flex;
-      align-items: center;
- 
-      img{
-        width: 1.3rem;
-        height: 1.3rem;
-      }
-      .btn{
-        height: 1.9rem;
-        padding: 0px;
-        font-size: .9rem;
-        color: #fff;
-        display: flex;
-        align-items: center;
-      }
-    }
-    .col-preco{
-      // border: 2px solid;
-      padding: 0;
-      // font-weight: 700;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+.col-preco {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-      .texto{
-        font-size: .7rem;
-      }
-      .preco{
-        font-size: 1rem;
-        font-weight: 700;
-      }
-    }
+  .texto {
+    font-size: 0.7rem;
+  }
+
+  .preco {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+/* =========================================================
+   PROTEÇÃO GLOBAL CONTRA OVERFLOW
+   ========================================================= */
+.card,
+.card-body {
+  min-width: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   MEDIA QUERIES – BREAKPOINTS REAIS
+   ========================================================= */
+
+/* 📱 Mobile S — 320px */
+@media (max-width: 320px) {
+  .card {
+    max-width: 280px;
+    height: 560px;
+  }
+}
+
+/* 📱 Mobile M / L — 375px a 425px */
+@media (min-width: 321px) and (max-width: 425px) {
+  .card {
+    max-width: 300px;
+    height: 575px;
+  }
+}
+
+/* 📲 Tablet — 768px */
+@media (min-width: 426px) and (max-width: 991.98px) {
+  .card {
+    max-width: 340px;
+    height: 585px;
+  }
+}
+
+/* 💻 Laptop — 1024px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .card {
+    max-width: 255px;   /* evita overflow com 4 colunas */
+    height: 565px;
+  }
+}
+
+/* 🖥️ Laptop L / Desktop — 1440px+ */
+@media (min-width: 1200px) {
+  .card {
+    max-width: 310px;
+    height: 587px;
   }
 }
 
 
-}
 
