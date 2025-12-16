@@ -4,15 +4,15 @@ import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 
 @Component({
-  selector: 'app-teste-carrosel',
+  selector: 'app-carrossel-depoimentos',
   standalone: true,
   imports: [CarouselModule, ButtonModule, CommonModule],
-  templateUrl: './teste-carrosel.html',
-  styleUrls: ['./teste-carrosel.scss'],
+  templateUrl: './carrossel-depoimentos.html',
+  styleUrl: './carrossel-depoimentos.scss',
 })
-export class TesteCarrosel implements OnInit {
+export class CarrosselDepoimentos implements OnInit{
 
-  responsiveOptions: any[] = [];
+    responsiveOptions: any[] = [];
 
   slides = [
     { img: 'assets/img/depoimentos/1.svg' },
@@ -32,3 +32,4 @@ export class TesteCarrosel implements OnInit {
     ];
   }
 }
+
