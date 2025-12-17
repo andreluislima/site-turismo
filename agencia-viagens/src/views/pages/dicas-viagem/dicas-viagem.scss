@@ -1,0 +1,46 @@
+.box-img {
+  box-shadow: 4px 4px 4px gray;
+  border-radius: 11px;
+  overflow: hidden;
+
+  // define o "quadro" onde a imagem vai ficar
+  height: 200px; // base (vai ser sobrescrito nos breakpoints)
+}
+
+.box-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: contain;   // ✅ mostra a imagem inteira
+  object-position: center;
+  background: #fff;      // opcional: evita fundo "transparente" do SVG ficar estranho
+}
+
+@media (max-width: 320px) {
+  .box-img { height: 160px; }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+  .box-img { height: 180px; }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  .box-img { height: 200px; }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .box-img { height: 240px; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .box-img { height: 260px; }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .box-img { height: 300px; }
+}
+
+@media (min-width: 1441px) {
+  .box-img { height: 340px; }
+}
