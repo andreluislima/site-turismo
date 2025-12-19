@@ -1,0 +1,93 @@
+// .hero {
+//   width: 100vw;
+//   height: 500px;
+//   overflow: hidden;
+// }
+
+// .hero img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+ 
+
+
+// .hero{
+//   padding-top: var(--header-height); /* ✅ compensa header fixo */
+// }
+
+// .box-img{
+//   position: relative; 
+//   width: 100%;
+//   height: 500px;
+//   overflow: hidden;
+// }
+
+
+// .box-img img{
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   // display: block;
+//   object-position: center top; /* ✅ prioriza o topo */
+// }
+
+
+
+.hero {
+  padding-top: var(--header-height);
+}
+
+/* 📦 container da imagem */
+.box-img {
+  position: relative;   /* 🔑 referência para o título */
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* 🖼 imagem */
+.box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* 🏷 título na faixa branca */
+.hero-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: var(--header-height); /* exatamente a altura da faixa branca */
+
+  display: flex;
+  align-items: center;
+  padding-left: 1.25rem;
+
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: #0648A8;
+  font-style: italic;
+
+  /* opcional: melhora contraste */
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(2px);
+}
+
+@media (min-width: 320px) and (max-width:375px){
+  .hero-title{
+    font-size: 1.7rem !important;
+  }
+}
+
+@media (max-width: 425px){
+  .hero-title{
+    font-size: 2rem;
+  }
+}

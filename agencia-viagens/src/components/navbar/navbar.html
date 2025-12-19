@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md fixed-top">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" [routerLink]="['/home']">
     <img class="logo" src="assets/img/logo2.svg" alt="Logo" />
   </a>
 
@@ -14,7 +14,12 @@
     <ul class="navbar-nav ms-auto mb-md-0 mx-5">
       <li class="nav-item" *ngFor="let page of navPages" (click)="closeMenu()">
         <img [src]="page.img" alt="" />
-        <a class="nav-link active" aria-current="page" href="#">{{ page.item }}</a>
+        <a 
+          class="nav-link active" 
+          aria-current="page" 
+          [routerLink]="['/', page.item.toLowerCase()]"
+          routerLinkActive="active-link"
+          >{{ page.item }}</a>
       </li>
     </ul>
   </div>

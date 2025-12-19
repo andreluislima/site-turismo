@@ -1,15 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
- 
-*{
-    margin: 0;
+/* styles.scss */
+
+/* Reset + box-model previsível */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-// Corrigir temporariamento o overflow do carrossel
-// html, body {
-//   overflow-x: hidden;
-// }
-
 html, body {
-  max-width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* Evita overflow horizontal (use com cuidado; ideal é corrigir a causa no componente) */
+body {
+  width: 100%;
   overflow-x: hidden;
+}
+
+/* Altura do header fixo (ajuste aqui UMA vez) */
+:root {
+  --header-height: 116px;
+}
+
+/* Se o header for FIXED-TOP, o main precisa do offset global */
+main {
+  flex: 1 1 auto;
+  padding-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* Footer sempre “empurrado” para baixo quando faltar conteúdo */
+footer {
+  margin-top: auto;
+}
+
+/* (Opcional) Se quiser ajustar a altura do header no mobile */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 96px; /* ajuste conforme sua navbar no mobile */
+  }
 }
