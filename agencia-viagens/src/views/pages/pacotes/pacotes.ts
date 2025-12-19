@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { Vitrine } from "../../../components/vitrine/vitrine";
 import { Depoimentos } from "../depoimentos/depoimentos";
-import { Catalogo } from "../catalogo/catalogo";
+
 
 @Component({
   selector: 'app-pacotes',
   standalone:true,
-  imports: [Depoimentos, Catalogo],
+  imports: [Vitrine, Depoimentos],
   templateUrl: './pacotes.html',
   styleUrl: './pacotes.scss',
 })

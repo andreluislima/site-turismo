@@ -9,10 +9,10 @@ import { Index } from '../views/pages/index';
 export const routes: Routes = [
     {path:'home', component:Index},
     {path:'pacotes', component:Pacotes},
-    {path:'solucoes-viagens', component:SolucoesViagens},
+    {path:'soluções de viagem', component:SolucoesViagens},
     {path:'passagens', component:Passagens},
-    {path:'passeios', component:Passeios},
-    {path:'passagens', component:Sobre},
+    {path:'passeios & experiencias', component:Passeios},
+    {path:'sobre', component:Sobre},
     {path:'', redirectTo:'home', pathMatch:'full'}
 
 
