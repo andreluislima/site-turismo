@@ -32,6 +32,31 @@
   }
 }
 
+.navbar {
+
+  .nav-link:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  /* Estado ativo */
+  .active-link .nav-link {
+    transform: scale(1.1);
+    border-bottom: 3px solid #0648A8;
+  }
+  
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 1s ease;
+}
+
+.nav-content:hover {
+  transform: scale(1.1);
+}
+}
+
 @media(max-width:768px){
  .navbar .logo {
     margin-left: 33px;

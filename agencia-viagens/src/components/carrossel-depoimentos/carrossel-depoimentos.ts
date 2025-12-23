@@ -12,6 +12,7 @@ import { CarouselModule } from 'primeng/carousel';
 })
 export class CarrosselDepoimentos implements OnInit{
 
+    title = "Depoimentos"
     responsiveOptions: any[] = [];
 
   slides = [

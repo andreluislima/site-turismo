@@ -12,14 +12,24 @@
 
   <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarCollapse">
     <ul class="navbar-nav ms-auto mb-md-0 mx-5">
-      <li class="nav-item" *ngFor="let page of navPages" (click)="closeMenu()">
+      <li 
+        class="nav-item" 
+        *ngFor="let page of navPages" 
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        
+        >
+        <div class="nav-content">
+        
         <img [src]="page.img" alt="" />
         <a 
           class="nav-link active" 
           aria-current="page" 
           [routerLink]="['/', page.item.toLowerCase()]"
-          routerLinkActive="active-link"
+          
           >{{ page.item }}</a>
+        </div>
       </li>
     </ul>
   </div>

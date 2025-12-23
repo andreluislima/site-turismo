@@ -1,0 +1,58 @@
+.hero {
+  padding-top: var(--header-height);
+}
+
+/* 📦 container da imagem */
+.box-img {
+  position: relative;   /* 🔑 referência para o título */
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* 🖼 imagem */
+.box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* 🏷 título na faixa branca */
+.hero-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // border: 2px solid;
+
+  width: 100%;
+  // height: var(--header-height); /* exatamente a altura da faixa branca */
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  padding-left: 1.25rem;
+
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: #0648A8;
+  font-style: italic;
+
+  /* opcional: melhora contraste */
+  background: rgba(255, 255, 255, 0.158);
+  backdrop-filter: blur(2px);
+}
+
+@media (min-width: 320px) and (max-width:375px){
+  .hero-title{
+    font-size: 1.7rem !important;
+  }
+}
+
+@media (max-width: 425px){
+  .hero-title{
+    font-size: 2rem;
+  }
+}
