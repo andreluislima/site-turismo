@@ -3,32 +3,22 @@
     <img class="logo" src="assets/img/logo2.svg" alt="Logo" />
   </a>
 
-  <app-toggle 
-    class="mx-4" 
-    [isOpen]="isMenuOpen" 
-    (toggle)="toggleMenu()"
-    >
-  </app-toggle>
+  <app-toggle class="mx-4" [isOpen]="isMenuOpen" (toggle)="toggleMenu()"> </app-toggle>
 
   <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarCollapse">
     <ul class="navbar-nav ms-auto mb-md-0 mx-5">
-      <li 
-        class="nav-item" 
-        *ngFor="let page of navPages" 
+      <li
+        class="nav-item"
+        *ngFor="let page of navPages"
         routerLinkActive="active-link"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeMenu()"
-        
-        >
+      >
         <div class="nav-content">
-        
-        <img [src]="page.img" alt="" />
-        <a 
-          class="nav-link active" 
-          aria-current="page" 
-          [routerLink]="['/', page.item.toLowerCase()]"
-          
-          >{{ page.item }}</a>
+          <img [src]="page.img" alt="" />
+          <a class="nav-link" [routerLink]="['/', page.item.toLowerCase()]">
+            {{ page.item }}
+          </a>
         </div>
       </li>
     </ul>

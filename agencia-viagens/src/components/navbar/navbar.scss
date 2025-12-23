@@ -1,84 +1,86 @@
-.navbar{
-  background-color:#DF6416;
-  padding-bottom: 0;
-  padding-top: 0;
-
-  .logo{
-    width: 6.7rem;
-    margin-left: 100px;
-    // border: 2px solid;
-  }
-
-  ul li {
-    // border: 2px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 2rem;
-
-    a{
-      color: #fff;
-      font-size: .8rem;
-      font-weight: 600;
-      text-transform: capitalize;
-    }
-    
-    img{
-      //  border: 2px solid;
-       width: 1.4rem;
-       color: #fff;
-       
-    }
-  }
+:root {
+  --navbar-height: 80px;
 }
 
 .navbar {
+  background-color: #DF6416;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: var(--navbar-height);
+  z-index: 1000;
 
-  .nav-link:hover {
-    transform: scale(1.1);
-    opacity: 1;
+  .logo {
+    width: 6.7rem;
+    margin-left: 100px;
   }
 
-  /* Estado ativo */
-  .active-link .nav-link {
+  .nav-item {
+    margin-left: 2rem;
+  }
+
+  .nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .2s ease;
+  }
+
+  .nav-link {
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: border-color .2s ease;
+  }
+
+  .nav-content img {
+    width: 1.4rem;
+  }
+
+  /* Hover: zoom no bloco inteiro (ícone + texto) */
+  .nav-item:hover .nav-content {
     transform: scale(1.1);
+  }
+
+  /* Ativo: aplicado quando o LI recebe "active-link" */
+  .nav-item.active-link .nav-content {
+    transform: scale(1.1);
+  }
+
+  .nav-item.active-link .nav-link {
     border-bottom: 3px solid #0648A8;
   }
-  
-.nav-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 1s ease;
 }
 
-.nav-content:hover {
-  transform: scale(1.1);
-}
+/* Compensa o navbar fixo (coloque no styles.scss global) */
+body {
+  padding-top: var(--navbar-height);
 }
 
-@media(max-width:768px){
- .navbar .logo {
-    margin-left: 33px;
-    padding: 2px;
-    width: 100px;
+@media (max-width: 768px) {
+  .navbar {
+    .logo {
+      margin-left: 33px;
+      padding: 2px;
+      width: 100px;
+    }
 
-  }
- 
-  ul{
-    // border: 2px solid;
-    display: flex;
-    align-items: flex-start;
-  }
-  ul li {
-    // border: 2px solid;
-    margin-bottom: 5px;
-    .nav-link{
-      // border: 2px solid red;
+    ul {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .nav-item {
+      margin-bottom: 5px;
+      margin-left: 0;
+    }
+
+    .nav-link {
       font-size: 1.1rem !important;
       margin-bottom: 5px;
     }
-    img{
+
+    .nav-content img {
       display: none;
     }
   }
