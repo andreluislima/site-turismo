@@ -36,7 +36,7 @@ export class Navbar {
       "img": "assets/img/icons/navbar/icons-ingressos.png"
     },
     {
-      "item": "passeios & experiencias",
+      "item": "passeios",
       "img": "assets/img/icons/navbar/icons-mundo.png"
     },
     {

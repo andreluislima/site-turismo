@@ -5,13 +5,17 @@ import { Passagens } from '../views/pages/passagens/passagens';
 import { Passeios } from '../views/pages/passeios/passeios';
 import { Sobre } from '../views/pages/sobre/sobre';
 import { Index } from '../views/pages/index';
+import { PasseioDetalhe } from '../views/pages/passeio-detalhe/passeio-detalhe';
 
 export const routes: Routes = [
     {path:'home', component:Index},
     {path:'pacotes', component:Pacotes},
     {path:'soluções de viagem', component:SolucoesViagens},
     {path:'passagens', component:Passagens},
-    {path:'passeios & experiencias', component:Passeios},
+    {path:'passeios', component:Passeios},
+
+    {path:'passeios/:id', component:PasseioDetalhe},
+
     {path:'sobre', component:Sobre},
     {path:'', redirectTo:'home', pathMatch:'full'}
 

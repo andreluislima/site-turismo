@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CardItem } from '../../app/domain/carditem';
 
 @Component({
@@ -11,4 +11,10 @@ import { CardItem } from '../../app/domain/carditem';
 })
 export class Card {
   @Input({ required: true }) item!: CardItem;
+  @Output() open = new EventEmitter<any>();
+
+  onOpen(){
+    this.open.emit(this.item);
+  }
+
 }
