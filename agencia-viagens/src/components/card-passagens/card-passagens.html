@@ -1,20 +1,12 @@
 
-<div class="card custom-card" (click)="onOpen()">
+<div class="card custom-card">
   <div class="img-wrapper">
     <img [src]="item.imgBanner" class="card-img-top" alt="..." />
     <div class="title-overlay mx-3">{{item.titulo}}</div>
   </div>
   
-  <div class="card-body">
-    <div class="title-cidade">
-      <img [src]="item.imgIcon" alt="" />
-      <span>{{item.uf}}</span>
-      <p class="card-text mt-2 mx-2">
-        {{item.descricao}}
-      </p>
-    </div>
+  <!-- <div class="card-body">
     <hr />
-
     <div class="row box-preco">
       <div class="col-8 col-btn p-1">
         <img src="assets/img/icons/icons8-whatsapp.png" class="mx-2" alt="" />
@@ -25,5 +17,5 @@
         <span class="preco">{{item.preco}}</span>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

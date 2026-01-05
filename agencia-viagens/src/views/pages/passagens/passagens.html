@@ -17,9 +17,9 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
       <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center box-card"
       *ngFor="let p of passagem_nacional">
-        <app-card 
+        <app-card-passagens 
           [item]="p"
-          ></app-card>
+          ></app-card-passagens>
       </div>
     </div>
   </div>
@@ -31,9 +31,9 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
       <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center box-card"
       *ngFor="let p of passagem_internacional">
-        <app-card 
+        <app-card-passagens 
           [item]="p"
-          ></app-card>
+          ></app-card-passagens>
       </div>
     </div>
   </div>
