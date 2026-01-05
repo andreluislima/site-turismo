@@ -10,7 +10,36 @@
   </div>
 </div> -->
 <app-banner-title-pages title="Passagens"></app-banner-title-pages>
-<app-vitrine></app-vitrine>
+
+<div class="album py-5 bg-body-tertiary">
+  <div class="container">
+    <h2>Passagens Nacionais</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center box-card"
+      *ngFor="let p of passagem_nacional">
+        <app-card 
+          [item]="p"
+          ></app-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="album py-5 bg-body-tertiary">
+  <div class="container">
+    <h2>Passagens Internacionais</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center box-card"
+      *ngFor="let p of passagem_internacional">
+        <app-card 
+          [item]="p"
+          ></app-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
 <app-depoimentos></app-depoimentos>
 
 
