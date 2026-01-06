@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CardItem } from '../../app/domain/carditem';
+import { BtnFalarConsultor } from "../btn-falar-consultor/btn-falar-consultor";
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BtnFalarConsultor],
   templateUrl: './card.html',
   styleUrl: './card.scss',
 })
