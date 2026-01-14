@@ -4,10 +4,9 @@
    ========================================================= */
 .card {
   // border: 2px solid red;
-
+  border: none;
   width: 100%;
-  max-width: 310px;     /* Desktop grande */
-  height: 587px;
+  max-width: 300px;     /* Desktop grande */
 
   margin: 0 auto;
   box-shadow: -3px 5px 4px #838383;
@@ -19,7 +18,7 @@
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.025);
   transition: transform 1s ease;
 }
 

@@ -1,7 +1,6 @@
-import { CardItem } from "../domain/carditem";
 
 
-export const passagensInternacionais = [
+export const PASSAGENS_INTERNACIONAIS = [
   {
     id: "1",
     titulo: "Descubra Paris",

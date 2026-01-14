@@ -1,6 +1,6 @@
 import { CardItem } from "../domain/carditem";
 
-export const passagensNacionais = [
+export const PASSAGENS_NACIONAIS = [
   {
     id: "1",
     titulo: "Visite o Pão de Açúcar",
