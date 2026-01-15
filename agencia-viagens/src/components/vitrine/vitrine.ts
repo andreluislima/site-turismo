@@ -1,21 +1,25 @@
-import { Component } from '@angular/core';
-import { PASSEIOS } from '../../app/data/data.passeios';
-import { Card } from "../card/card";
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Card } from '../card/card';
+import { VitrineOpenEvent, VitrineTipo } from '../../app/domain/vitrine-base';
+import { CardItem } from '../../app/domain/carditem';
 
 @Component({
   selector: 'app-vitrine',
+  standalone: true,
   imports: [Card, CommonModule],
   templateUrl: './vitrine.html',
   styleUrl: './vitrine.scss',
 })
 export class Vitrine {
-  passeios = PASSEIOS;
-  
-  constructor (private router: Router){}
-  
-  abrirDetalhePasseio(item:any){
-    this.router.navigate(['/passeios', item.id])
+  @Input({ required: true }) items: CardItem[] = [];
+  @Input({ required: true }) tipo!: VitrineTipo;
+
+  @Output() open = new EventEmitter<VitrineOpenEvent>();
+
+  abrir(item: CardItem) {
+    this.open.emit({ id: item.id, tipo: this.tipo });
   }
+
+  trackById = (_: number, item: CardItem) => item.id;
 }

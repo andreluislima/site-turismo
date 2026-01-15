@@ -1,5 +1,5 @@
 export interface CardItem{
-    id:String;
+    id:number;
     titulo:String;
     cidade:String;
     uf?:String;

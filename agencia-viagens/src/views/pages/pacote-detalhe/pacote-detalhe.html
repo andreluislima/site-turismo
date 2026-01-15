@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="layout container-fluid" *ngIf="pacote as p">
+  <div class="row layout__grid mt-4">
+    <div class="layout_title mb-3 mt-2">
+      <h2>{{ p.titulo }}</h2>
+      <h6>{{ p.localizacao }}</h6>
+    </div>
+    <!-- ESQUERDA -->
+    <section class="col-12 col-lg-7 layout__left">
+      <div class="layout__stack">
+        <!-- BANNER -->
+        <div class="layout__panel layout__panel--banner">
+          <img [src]="p.imagens.banner" alt="Banner do pacote" />
+        </div>
+
+        <!-- GALERIA -->
+        <div class="layout__panel layout__panel--gallery">
+          <img *ngFor="let img of p.imagens.galeria" [src]="img" />
+        </div>
+
+        <!-- DESCRIÇÃO -->
+        <div class="layout__panel layout__panel--description">
+          <h3>Sobre o pacote</h3>
+          <p>{{ p.sobre.descricao }}</p>
+          <p>{{ p.sobre.observacoes }}</p>
+
+          <!-- PONTOS PRÓXIMOS -->
+          <ul *ngFor="let p of pacote?.pontosProximos">
+            <li>{{ p.nome }} - {{ p.distancia }} - {{ p.referencia }}</li>
+          </ul>
+
+          <h5>Informações</h5>
+          <ul>
+            <li>Possui acessibilidade para cadeirantes?</li>
+            <p>{{p.informacoes.acessibilidade}}</p>
+
+            <li>É preciso pagar alguma taxa no local?</li>
+            <p>{{p.informacoes.acessibilidade}}. O passeio é realizado de catamarã, com valor pago à parte.</p>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIREITA -->
+    <aside class="col-12 col-lg-5 layout__right">
+      <div class="layout__panel layout__panel--gray">
+        <app-form></app-form>
+      </div>
+    </aside>
+  </div>
+</div>

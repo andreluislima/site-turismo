@@ -15,9 +15,11 @@
         (click)="closeMenu()"
       >
         <div class="nav-content">
+          <a class="nav-link" [routerLink]="['/', page.item.toLowerCase()]"> 
           <img [src]="page.img" alt="" />
-          <a class="nav-link" [routerLink]="['/', page.item.toLowerCase()]">
-            {{ page.item }}
+            <p>
+              {{ page.item }}
+            </p>
           </a>
         </div>
       </li>

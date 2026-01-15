@@ -1,5 +1,10 @@
 <app-banner-title-pages title="Passeios e Experiências"></app-banner-title-pages>
-<app-vitrine></app-vitrine>
+<app-vitrine
+    [items]="passeios"
+    tipo="PASSEIO"
+    (open)="onOpen($event)"
+>
+</app-vitrine>
 <app-depoimentos></app-depoimentos>
 <app-btn-whatsapp></app-btn-whatsapp>
 

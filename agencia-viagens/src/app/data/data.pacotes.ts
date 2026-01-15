@@ -2,7 +2,7 @@ import { CardItem } from "../domain/carditem";
 
 export const PACOTES: CardItem[] = [
     {
-        id:"1",
+        id:1,
         titulo: "Pacotes para maragogi",
         cidade:"Maragogi",
         uf:"AL",
@@ -12,7 +12,7 @@ export const PACOTES: CardItem[] = [
         preco:"R$899,00"
     },
         {
-        id:"2",
+        id:2,
         titulo: "Pacotes para maragogi",
         cidade:"Maragogi",
         uf:"AL",
@@ -22,7 +22,7 @@ export const PACOTES: CardItem[] = [
         preco:"R$899,00"
     },
         {
-        id:"3",
+        id:3,
         titulo: "Pacotes para maragogi",
         cidade:"Maragogi",
         uf:"AL",
@@ -32,7 +32,7 @@ export const PACOTES: CardItem[] = [
         preco:"R$899,00"
     },
         {
-        id:"4",
+        id:4,
         titulo: "Pacotes para maragogi",
         cidade:"Maragogi",
         uf:"AL",
