@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Hero } from "../../components/hero/hero";
 import { Destaques } from '../../views/pages/destaques/destaques';
-import { Catalogo } from "../../views/pages/catalogo/catalogo";
+import { Catalogo } from "../../views/pages/catalogo-passeios/catalogo";
 import { Depoimentos } from "../../views/pages/depoimentos/depoimentos";
 import { DicasViagem } from "../../views/pages/dicas-viagem/dicas-viagem";
 import { BtnWhatsapp } from "../../components/btn-whatsapp/btn-whatsapp";

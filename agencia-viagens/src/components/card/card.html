@@ -1,19 +1,20 @@
-
 <div class="card custom-card" (click)="onOpen()">
   <div class="img-wrapper">
     <img [src]="item.imgBanner" class="card-img-top" alt="..." />
-    <div class="title-overlay mx-3">{{item.titulo}}</div>
+    <div class="title-overlay mx-2">
+      <h3>{{ item.titulo }}</h3>
+    </div>
   </div>
-  
+
   <div class="card-body">
     <div class="title-cidade">
       <img [src]="item.imgIcon" alt="" />
-      <span>{{item.uf}}</span>
-      <p class="card-text mt-2 mx-2">
-        {{item.descricao}}
-      </p>
+      <span>{{ item.uf }}</span>
     </div>
-    <hr />
+      <p class="card-text mx-2">
+        {{ item.descricao }}
+      </p>
+    <hr/>
 
     <div class="row box-preco">
       <div class="col-8 col-btn p-1">
@@ -22,7 +23,7 @@
       </div>
       <div class="col-3 col-preco mx-2">
         <span class="texto">A partir de:</span>
-        <span class="preco">{{item.preco}}</span>
+        <span class="preco">{{ item.preco }}</span>
       </div>
     </div>
   </div>

@@ -35,10 +35,11 @@
   left: 0;
   width: 100%;
   padding: 10px;
-
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  h3{
+    font-size: 1.1rem;
+  }
 }
 
 /* =========================================================
@@ -47,7 +48,7 @@
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex: 1;
 
   min-width: 0;        /* evita overflow em flexbox */
@@ -59,7 +60,7 @@
    ========================================================= */
 .title-cidade {
   font-size: 0.9rem;
-
+  display: flex;
   img {
     width: 20px;
   }

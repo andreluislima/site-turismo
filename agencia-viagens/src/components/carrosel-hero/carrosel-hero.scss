@@ -9,6 +9,7 @@
 .carrossel {
   margin: 0 !important;
   padding: 0 !important;
+  // border: 2px solid;
 }
 
 .carrossel {
@@ -36,7 +37,8 @@
 /* === BANNER === */
 .box-img {
   width: 100%;
-  height: clamp(220px, 35vw, 520px); // responsivo e previsível
+  // height: clamp(220px, 35vw, 520px); // responsivo e previsível
+  max-height: 520px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -49,6 +51,7 @@
   display: block;
   object-fit: contain;      // preenche o banner
   object-position: center; // centraliza o corte
+  // border: 2px solid;
 }
 
 /* === Setas (ocultar) === */
@@ -63,6 +66,7 @@ button.p-button.p-button-icon-only.p-button-rounded.p-button-secondary.p-button-
   width: 12px;
   height: 12px;
   border-radius: 50%;
+  
 }
 
 :host ::ng-deep .p-carousel-indicator-active .p-carousel-indicator-button {

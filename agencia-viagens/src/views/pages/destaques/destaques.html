@@ -1,10 +1,9 @@
-<div class="album py-5 bg-body-tertiary">
+<div class="album py-4">
   <div class="container">
-    <div class="secao-title p-3 mb-3">
+    <div class="secao-title p-3 mb-1">
       <h2>Destaques para pacotes de viagem imperdíveis!</h2>
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-      <!-- <div class="col-12 col-m-6 col-lg-3" *ngFor="let p of pacotes"> -->
         <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center" 
         *ngFor="let p of pacotes">
         <app-card [item]="p"></app-card>
