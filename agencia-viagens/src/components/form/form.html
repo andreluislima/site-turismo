@@ -1,1 +1,61 @@
-<p>form works!</p>
+<div class="container-fluid">
+  <form class="mt-2">
+    <div class="row g-3 p-4">
+      <!-- Nome -->
+      <div class="col-12">
+        <label class="form-label">Nome</label>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Nome</mat-label>
+          <input matInput placeholder="Informe seu nome completo" />
+        </mat-form-field>
+      </div>
+
+      <!-- Data -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <label class="form-label">Data</label>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Data</mat-label>
+          <input matInput type="date" placeholder="Selecione a data" />
+        </mat-form-field>
+      </div>
+
+      <!-- Número de Pessoas -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <label class="form-label">Número de Pessoas</label>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Número de Pessoas</mat-label>
+          <input matInput type="number" min="1" placeholder="Informe o número de pessoas" />
+        </mat-form-field>
+      </div>
+
+      <!-- Telefone/Whatsapp -->
+      <div class="col-12 col-lg-4">
+        <label class="form-label">Telefone/Whatsapp</label>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Telefone/Whatsapp</mat-label>
+          <input matInput type="tel" placeholder="Informe o seu telefone" />
+        </mat-form-field>
+      </div>
+
+      <!-- Mensagem -->
+      <div class="col-12">
+        <label class="form-label">Mensagem</label>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Mensagem</mat-label>
+          <textarea
+            matInput
+            rows="4"
+            placeholder="Descreva outras informações importantes"
+          ></textarea>
+        </mat-form-field>
+      </div>
+
+      <!-- Ação -->
+      <div class="col-12 d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary">
+          Enviar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
