@@ -75,33 +75,36 @@
    ========================================================= */
 .box-preco {
   display: flex;
-  margin: 0;
+  justify-content: space-around;
+  // border: 2px solid;
 }
 
-.col-btn {
-  background-color: #14974F;
-  border-radius: 40px;
-  display: flex;
+.btn-whatsapp {
+  display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
 
-  img {
-    width: 1.3rem;
-    height: 1.3rem;
-  }
+  background-color: #14974F;
+  color: #fff;
+  text-decoration: none;
 
-  .btn {
-    height: 1.9rem;
-    padding: 0;
-    font-size: 0.9rem;
-    color: #fff;
-    display: flex;
-    align-items: center;
-  }
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap; // nunca quebra linha
+}
+
+.btn-whatsapp img {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .col-preco {
   padding: 0;
   display: flex;
+  // border: 2px solid;
   flex-direction: column;
   align-items: center;
 

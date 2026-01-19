@@ -11,20 +11,30 @@
       <img [src]="item.imgIcon" alt="" />
       <span>{{ item.uf }}</span>
     </div>
-      <p class="card-text mx-2">
-        {{ item.descricao }}
-      </p>
-    <hr/>
+    <p class="card-text mx-2">
+      {{ item.descricao }}
+    </p>
+    <hr />
 
-    <div class="row box-preco">
-      <div class="col-8 col-btn p-1">
-        <img src="assets/img/icons/icons8-whatsapp.png" class="mx-2" alt="" />
-        <app-btn-falar-consultor></app-btn-falar-consultor>
+    <div class="row box-preco align-items-center">
+      <div class="col-8">
+        <a
+          class="btn-whatsapp"
+          href="https://api.whatsapp.com/send?phone=5521997754017&text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/img/icons/icons8-whatsapp.png" alt="WhatsApp" />
+          <!-- <span>Falar com o consultor </span> -->
+           <span>Quero viajar</span>
+        </a>
       </div>
-      <div class="col-3 col-preco mx-2">
+
+      <div class="col-4 col-preco">
         <span class="texto">A partir de:</span>
         <span class="preco">{{ item.preco }}</span>
       </div>
     </div>
+    
   </div>
 </div>
