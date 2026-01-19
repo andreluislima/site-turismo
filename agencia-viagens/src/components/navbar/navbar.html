@@ -11,15 +11,15 @@
         class="nav-item"
         *ngFor="let page of navPages"
         routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()"
       >
-        <div class="nav-content">
+        <div class="nav-content nav-spacing">
           <a class="nav-link" [routerLink]="['/', page.item.toLowerCase()]"> 
           <img [src]="page.img" alt="" />
-            <p>
+            <span class="d-block">
               {{ page.item }}
-            </p>
+            </span>
           </a>
         </div>
       </li>

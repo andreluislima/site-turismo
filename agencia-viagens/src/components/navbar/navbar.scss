@@ -1,10 +1,12 @@
 :root {
   --navbar-height: 60px;
-  
 }
-
+/* Compensa o navbar fixo (coloque no styles.scss global) */
+body {
+  padding-top: var(--navbar-height);
+}
 .navbar {
-  background-color: #DF6416;
+  background-color: #df6416;
   padding-top: 0;
   padding-bottom: 0;
   height: var(--navbar-height);
@@ -23,7 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform .2s ease;
+    transition: transform 0.2s ease;
   }
 
   .nav-link {
@@ -31,10 +33,12 @@
     flex-direction: column;
     align-items: center;
     color: #fff;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: capitalize;
-    transition: border-color .2s ease;
+    transition: border-color 0.1s ease;
+    padding: 0;
+    // border: 2px solid;
   }
 
   .nav-content img {
@@ -42,8 +46,13 @@
   }
 
   /* Hover: zoom no bloco inteiro (ícone + texto) */
-  .nav-item:hover .nav-content {
+  .nav-item:hover .nav-content .nav-link {
     transform: scale(1.1);
+    color: #0648a8;
+  }
+
+  .nav-item:hover svg {
+    fill: #0648a8;
   }
 
   /* Ativo: aplicado quando o LI recebe "active-link" */
@@ -52,15 +61,14 @@
   }
 
   .nav-item.active-link .nav-link {
-    border-bottom: 3px solid #0648A8;
+    border-bottom: 3px solid #0648a8;
+    // border: 2px solid;
   }
 }
 
-/* Compensa o navbar fixo (coloque no styles.scss global) */
-body {
-  padding-top: var(--navbar-height);
+.nav-spacing{
+  margin: 15px;
 }
-
 @media (max-width: 768px) {
   .navbar {
     // border: 2px solid;
