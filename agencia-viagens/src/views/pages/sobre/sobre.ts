@@ -22,14 +22,15 @@ export class Sobre {
   textoHtml: SafeHtml;
   constructor(private sanitizer: DomSanitizer) {
     const html = `
-       <p>Somos movidos por um desejo simples e poderoso: transformar sonhos em destinos.</p>
+       <p>Olá, eu sou a Thayná.</p>
+       <p>Sou movida por um desejo simples e poderoso: transformar sonhos em destinos.</p>
 
-      <p>Acreditamos que viajar é uma das experiências mais ricas que alguém pode viver — é pausa, descoberta, encontro, inspiração.</p>
+      <p>Acredito que viajar é uma das experiências mais ricas que alguém pode viver — é pausa, descoberta, encontro, inspiração.</p>
 
-      <p>Nasceu assim a nossa agência: da paixão por criar jornadas que fazem brilhar os olhos, conectar pessoas ao mundo e tornar cada viagem única. Aqui, cada roteiro é pensado com carinho, cada detalhe importa e cada cliente é tratado como alguém que está prestes a viver algo especial.</p>
+      <p>Nasceu assim a minha agência: da paixão por criar jornadas que fazem brilhar os olhos, conectar pessoas ao mundo e tornar cada viagem única. Aqui, cada roteiro é pensado com carinho, cada detalhe importa e cada cliente é tratado como alguém que está prestes a viver algo especial.</p>
 
       <p>
-        Nossa missão é <strong>facilitar a sua experiência</strong>, oferecer <strong>segurança, praticidade</strong> e um atendimento humano — daquele que entende o que você busca, mesmo quando você ainda não sabe exatamente para onde quer ir.
+        Minha missão é <strong>facilitar a sua experiência</strong>, oferecer <strong>segurança, praticidade</strong> e um atendimento humano — daquele que entende o que você busca, mesmo quando você ainda não sabe exatamente para onde quer ir.
         <br>
         Seja para relaxar, explorar, celebrar ou simplesmente fugir da rotina, estamos ao seu lado em cada passo.
       </p>

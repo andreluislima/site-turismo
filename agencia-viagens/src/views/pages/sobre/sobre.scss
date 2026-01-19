@@ -1,19 +1,14 @@
 .layout {
   // min-height: 100dvh; // melhor que 100vh em mobile (barra do navegador)
   display: flex;
-  border: 2px solid;
+  // border: 2px solid;
   justify-content: center;
   align-items: center;
 }
 
-.layout__grid {
-  // min-height: 50dvh;
-  // padding-top: var(--header-height, 0px); // se seu navbar for fixed
- 
-}
 
 .row{
-  border: 2px solid red;
+  // border: 2px solid red;
   display: flex;
   align-items: center;
 
@@ -35,4 +30,10 @@
   font-weight: 700;
 }
 
- 
+ @media (min-width: 320px) and (max-width:425px){
+   .row{
+    max-width: 100%;
+    text-align: center;
+    // border: 2px solid;
+   }
+}
