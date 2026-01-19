@@ -6,6 +6,8 @@ import { BannerTitlePages } from '../../../components/banner-title-pages/banner-
 import { BtnWhatsapp } from '../../../components/btn-whatsapp/btn-whatsapp';
 import { VitrineOpenEvent } from '../../../app/domain/vitrine-base';
 import { PACOTES } from '../../../app/data/data.pacotes';
+import { BannerPages } from '../../../app/domain/banner-pages';
+import { BANNER_PAGES } from '../../../app/data/data.banner-pages';
 
 @Component({
   selector: 'app-pacotes',
@@ -16,6 +18,12 @@ import { PACOTES } from '../../../app/data/data.pacotes';
 })
 export class Pacotes {
   pacotes = PACOTES;
+
+  banner: BannerPages = BANNER_PAGES.find((banner) => banner.id === 1) ?? {
+    id: 5,
+    title: 'pacotes de viagem',
+    img: 'assets/img/banner-tages/banner-geral.svg',
+  };
 
   constructor(private router: Router) {}
 

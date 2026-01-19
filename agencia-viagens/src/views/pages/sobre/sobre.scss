@@ -1,57 +1,38 @@
-
-.hero {
-  padding-top: var(--header-height);
+.layout {
+  // min-height: 100dvh; // melhor que 100vh em mobile (barra do navegador)
+  display: flex;
+  border: 2px solid;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 📦 container da imagem */
-.box-img {
-  position: relative;   /* 🔑 referência para o título */
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
+.layout__grid {
+  // min-height: 50dvh;
+  // padding-top: var(--header-height, 0px); // se seu navbar for fixed
+ 
 }
 
-/* 🖼 imagem */
-.box-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-/* 🏷 título na faixa branca */
-.hero-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: var(--header-height); /* exatamente a altura da faixa branca */
-
+.row{
+  border: 2px solid red;
   display: flex;
   align-items: center;
-  padding-left: 1.25rem;
 
-  margin: 0;
+}
+.sobre-texto {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #2b2b2b;
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+.sobre-texto p {
+  margin: 0 0 1rem 0;
+}
+
+.sobre-texto strong {
   font-weight: 700;
-  font-size: 2.3rem;
-  color: #0648A8;
-  font-style: italic;
-
-  /* opcional: melhora contraste */
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(2px);
 }
 
-@media (min-width: 320px) and (max-width:375px){
-  .hero-title{
-    font-size: 1.7rem !important;
-  }
-}
-
-@media (max-width: 425px){
-  .hero-title{
-    font-size: 2rem;
-  }
-}
+ 

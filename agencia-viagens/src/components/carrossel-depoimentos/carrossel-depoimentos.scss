@@ -1,15 +1,25 @@
 
 .box-img {
-  max-width: 100% !important;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  // padding: 0;
-  margin-top: 50px;
-  // border: 2px solid;
+  width: 100%;
+  max-width: 980px;        // controla o tamanho no desktop
+  margin: 2rem auto 0;     // centraliza sem margin-left fixo
   background-color: #f9f2d4;
-  margin-left: 15%;
   border-radius: 20px;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.25rem;
+  min-height: clamp(220px, 30vw, 420px); // responsivo
+}
+
+.box-img img {
+  width: 100%;
+  height: auto;
+  max-height: clamp(180px, 26vw, 360px);
+  object-fit: contain;   // importante para SVG não cortar
+  display: block;
 }
 
 .box-img img {
@@ -43,15 +53,28 @@
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width: 768px) {
   .box-img {
-    height: 400px !important;   // reduz altura
+    max-width: 92vw;
+    padding: 1rem;
+    border-radius: 16px;
+    min-height: 240px;
+  }
+
+  .box-img img {
+    max-height: 220px;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
   .box-img {
-    height: 300px !important;
+    max-width: 94vw;
+    padding: 0.9rem;
+    min-height: 220px;
+  }
+
+  .box-img img {
+    max-height: 200px;
   }
 }
 

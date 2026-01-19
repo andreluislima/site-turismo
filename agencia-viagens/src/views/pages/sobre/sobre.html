@@ -1,6 +1,11 @@
-
-<app-banner-title-pages title="Sobre"></app-banner-title-pages>
-<!-- <app-vitrine></app-vitrine> -->
+<app-banner-title-pages 
+  [title]="banner.title"
+  [img]="banner.img"
+></app-banner-title-pages>
+<div class="layout container-fluid">
+  <div class="row layout__grid">
+    <section class="sobre-texto" [innerHTML]="textoHtml"></section>
+  </div>
+</div>
 <app-depoimentos></app-depoimentos>
 <app-btn-whatsapp></app-btn-whatsapp>
-

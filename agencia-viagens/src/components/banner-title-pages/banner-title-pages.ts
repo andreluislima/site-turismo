@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class BannerTitlePages {
   @Input() title!: string
+  @Input() img!:string
 }
