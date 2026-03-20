@@ -1,0 +1,30 @@
+.container-header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  // background-image: linear-gradient(#7096dbb2, #ffffff);
+  // background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  height: auto;
+}
+
+
+@media (max-width:425px) {
+  .container-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-btns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: auto;
+  }
+
+  
+}
