@@ -1,78 +1,110 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import LogoImage from "../../assets/img/logo2.svg";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import logo from "../../assets/img/logo2.svg";
 import "./NavBar.scss";
 
-export default function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const navItems = [
+  { label: "Pacotes", path: "/pacotes" },
+  { label: "Soluções", path: "/solucoes" },
+  { label: "Passagens", path: "/passagens" },
+  { label: "Passeios", path: "/passeios" },
+  { label: "Sobre", path: "/sobre" },
+];
 
-  function toggleMenu() {
-    setIsMenuOpen((prev) => !prev);
-  }
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const location = useLocation();
 
-  function closeMenu() {
-    setIsMenuOpen(false);
-  }
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const closeMenu = () => setIsOpen(false);
 
-  const navPages = [
-    {
-      item: "pacotes",
-      img: "/assets/img/icons/navbar/icons-mala.png",
-      path: "/pacotes",
-    },
-    {
-      item: "soluções de viagem",
-      img: "/assets/img/icons/navbar/icons-lampada.png",
-      path: "/solucoes",
-    },
-    {
-      item: "passagens",
-      img: "/assets/img/icons/navbar/icons-ingressos.png",
-      path: "/passagens",
-    },
-    {
-      item: "passeios",
-      img: "/assets/img/icons/navbar/icons-mundo.png",
-      path: "/passeios",
-    },
-    {
-      item: "sobre",
-      img: "/assets/img/icons/navbar/icons-pessoa.png",
-      path: "/sobre",
-    },
-  ];
+  // Fecha ao trocar de rota
+  useEffect(() => {
+    closeMenu();
+  }, [location.pathname]);
+
+  // Fecha ao clicar fora
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+
+      if (
+        isOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(target)
+      ) {
+        closeMenu();
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  // Fecha com ESC
+  useEffect(() => {
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    }
+
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  // Evita scroll do body quando menu mobile está aberto
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", isOpen);
+    return () => document.body.classList.remove("menu-open");
+  }, [isOpen]);
 
   return (
-    <nav className="navbar navbar-expand-md fixed-top">
-      <div className="container-fluid">
-        <a className="navbar-brand">
-          <img className="logo" src={LogoImage} alt="Logo" />
-        </a>
+    <nav className="navbar fixed-top">
+      <div className="nav-container">
+        <Link className="navbar-brand" to="/" onClick={closeMenu}>
+          <img className="logo" src={logo} alt="Logo" />
+        </Link>
 
         <button
-          className="navbar-toggler"
+          ref={buttonRef}
+          className={`menu-toggle ${isOpen ? "is-open" : ""}`}
           type="button"
           onClick={toggleMenu}
-          aria-label="Abrir menu"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+          aria-controls="mobile-menu"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span />
+          <span />
+          <span />
         </button>
 
-        <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}>
-          <ul className="navbar-nav ms-auto mb-md-0 mx-5">
-            {navPages.map((page) => (
-              <li className="nav-item" key={page.path} onClick={closeMenu}>
-                <div className="nav-content nav-spacing">
-                  <NavLink
-                    to={page.path}
-                    className={({ isActive }) =>
-                      isActive ? "nav-link active-link" : "nav-link"
-                    }
-                  >
-                    <img src={page.img} alt={page.item} />
-                    <span className="d-block">{page.item}</span>
-                  </NavLink>
-                </div>
+        <div
+          ref={menuRef}
+          id="mobile-menu"
+          className={`menu-wrapper ${isOpen ? "open" : ""}`}
+        >
+          <ul className="navbar-nav">
+            {navItems.map((item) => (
+              <li className="nav-item" key={item.path}>
+                <NavLink
+                  to={item.path}
+                  onClick={closeMenu}
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  {item.label}
+                </NavLink>
               </li>
             ))}
           </ul>
